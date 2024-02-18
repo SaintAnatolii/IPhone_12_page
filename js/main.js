@@ -49,7 +49,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
         };
     };
 
- 
+    // способ проще
+    //  const accordion = () => {
+    //         const characteristicsTitle = document.querySelectorAll('.characteristics__title')
+    //         const characteristicsDescription = document.querySelectorAll('.characteristics__description')
+        
+    //         const hideAll = () => {
+    //             characteristicsTitle.forEach(item => item.classList.remove('active'))
+    //             characteristicsDescription.forEach(item => item.style.height = ``)
+    //         }
+        
+    //         const open = (index) => {
+    //             hideAll()
+    //             characteristicsDescription[index].style.height = `${characteristicsDescription[index].scrollHeight}px`
+    //             characteristicsTitle[index].classList.add('active')
+    //         }
+        
+    //         characteristicsTitle.forEach((item, index) => {
+    //             item.addEventListener('click', () => {
+    //                 item.classList.contains('active') ? hideAll() : open(index)
+    //             })
+    //         })
+    // }
+    
     const accordion = () => {
         const characteristicsList = document.querySelector('.characteristics__list');
         const characteristicsItem = document.querySelectorAll('.characteristics__item');
